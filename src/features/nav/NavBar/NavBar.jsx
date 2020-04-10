@@ -1,8 +1,8 @@
 import React, { Component } from "react";
 import { Menu, Container, Button } from "semantic-ui-react";
 import { NavLink, Link, withRouter } from "react-router-dom";
-import SignedOutMenue from "./Menus/SignedOutMenue";
-import SignedInMenue from "./Menus/SignedInMenue";
+import SignedOutMenue from '../Menus/SignedOutMenue'
+import SignedInMenue from '../Menus/SignedInMenue'
 
 class NavBar extends Component {
   state = {
@@ -21,7 +21,7 @@ class NavBar extends Component {
       <Menu inverted fixed="top">
         <Container>
           <Menu.Item as={NavLink} exact to="/" header>
-            <img src="assets/logo.png" alt="logo" />
+            <img src="/assets/logo.png" alt="logo" />
             Re-vents
           </Menu.Item>
           <Menu.Item as={NavLink} exact to="/events" name="Events" />
@@ -30,7 +30,7 @@ class NavBar extends Component {
           <Menu.Item>
             <Button
               as={Link}
-              to="createEvent"
+              to="/createEvent"
               floated="right"
               positive
               inverted
